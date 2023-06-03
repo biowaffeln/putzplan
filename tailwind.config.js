@@ -8,7 +8,8 @@ export default {
 			...radix
 		},
 		fontFamily: {
-			hand: ['"Pangolin"', 'sans-serif']
+			hand: ['"Pangolin"', 'sans-serif'],
+			sans: ['"Inter variable"', 'sans-serif']
 		}
 	}
 };
