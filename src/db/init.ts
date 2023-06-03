@@ -1,19 +1,23 @@
 import { db } from './db';
 import { roommateSchema, choreSchema, choreRecordSchema } from './schema';
 
-const sampleRoommates = ['Amanda', 'Bobby', 'Carly'];
-const sampleChores = [
-	{ name: 'Clean kitchen', points: 5 },
-	{ name: 'Clean bathroom', points: 5 },
-	{ name: 'Vacuum', points: 2 },
-	{ name: 'Dust', points: 2 },
-	{ name: 'Take out trash', points: 1 },
-	{ name: 'Mop', points: 3 },
-	{ name: 'Wash dishes', points: 1 },
-	{ name: 'Do laundry', points: 3 },
-	{ name: 'Sweep', points: 2 },
-	{ name: 'Clean windows', points: 2 },
-	{ name: 'Clean fridge', points: 5 }
+const roommates = ['Mark', 'Michi', 'Leo'];
+const chores = [
+	{ name: 'Müll rausbringen', points: 1 },
+	{ name: 'Altglas wegbringen', points: 1 },
+	{ name: 'Pfand wegbringen', points: 1 },
+	{ name: 'Geschirrspülmaschine ausräumen', points: 2 },
+	{ name: 'Alles Geschirr spülen', points: 2 },
+	{ name: 'Küchenoberflächen putzen', points: 2 },
+	{ name: 'Schneidebretter putzen', points: 2 },
+	{ name: 'Gästehandtücher waschen', points: 2 },
+	{ name: 'Biomüll rausbringen', points: 2 },
+	{ name: 'Common areas saugen', points: 3 },
+	{ name: 'Treppenhaus saugen', points: 3 },
+	{ name: 'Waschbecken putzen', points: 3 },
+	{ name: 'Ofen/Mikrowelle putzen', points: 4 },
+	{ name: 'Dusche putzen', points: 4 },
+	{ name: 'Klo putzen', points: 5 }
 ];
 
 function init() {
@@ -23,10 +27,10 @@ function init() {
 
 	console.log('Database initialized.');
 
-	for (const roommate of sampleRoommates) {
+	for (const roommate of roommates) {
 		db.prepare(`INSERT INTO roommates (name) VALUES (?)`).run(roommate);
 	}
-	for (const chore of sampleChores) {
+	for (const chore of chores) {
 		db.prepare(`INSERT INTO chores (name, points) VALUES (?, ?)`).run(chore.name, chore.points);
 	}
 
