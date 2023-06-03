@@ -19,7 +19,7 @@
 	});
 </script>
 
-<h1 class="text-center font-hand text-4xl mt-10">Putzplan</h1>
+<h1 class="mt-10 text-center font-hand text-4xl">Putzplan</h1>
 <main class="mx-auto grid max-w-screen-lg gap-3 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
 	{#each chores as chore}
 		<article
@@ -30,7 +30,7 @@
 					{chore.points}
 					{points(chore.points)}
 				</p>
-				<h2 class="font-hand text-2xl font-medium leading-none text-amber-12 mt-1">{chore.name}</h2>
+				<h2 class="mt-1 font-hand text-2xl font-medium leading-none text-amber-12">{chore.name}</h2>
 				<Modal {chore} {roommateId} isOpen={isActive(chore)} on:close={resetActiveChore} />
 			</div>
 			<div class="mt-4 flex flex-grow items-end justify-end">
