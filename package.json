@@ -26,7 +26,6 @@
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.14",
-		"better-sqlite3": "^8.4.0",
 		"canvas-confetti": "^1.6.0",
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -47,5 +46,8 @@
 		"vite": "^4.3.0",
 		"zod": "^3.21.4"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"better-sqlite3": "^8.4.0"
+	}
 }
