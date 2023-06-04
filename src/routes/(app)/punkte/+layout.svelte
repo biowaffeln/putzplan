@@ -3,7 +3,7 @@
 </script>
 
 <h2 class="mt-10 text-center font-hand text-4xl">Punktestand</h2>
-<main class="mx-auto max-w-screen-sm px-4">
+<main class="mx-auto max-w-screen-lg px-4">
 	<div class="mb-6 mt-10 flex justify-center gap-2">
 		<ActiveLink
 			href="/punkte"

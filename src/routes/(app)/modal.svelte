@@ -29,7 +29,7 @@
 
 {#if isOpen}
 	<div
-		class="fixed inset-0 z-10 flex items-center justify-center overflow-y-auto px-2"
+		class="fixed inset-0 z-10 flex items-center justify-center overflow-y-auto px-4"
 		use:focusTrap
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -40,7 +40,7 @@
 		/>
 
 		<div
-			class="relative w-full max-w-md transform overflow-hidden rounded-lg bg-white p-6 text-left align-middle shadow-lg transition-all"
+			class="relative w-full max-w-md transform overflow-hidden rounded-lg bg-white p-4 text-left align-middle shadow-lg transition-all"
 			transition:scale={{ start: 0.95, duration: 200 }}
 		>
 			{#if state !== 'success'}

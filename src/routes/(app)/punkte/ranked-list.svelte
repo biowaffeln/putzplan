@@ -10,29 +10,23 @@
 
 <div class="flex flex-col gap-3">
 	{#each roommatesRanked as r, i}
-		<div class="rounded-lg border border-dashed border-sand-8 py-4 text-center">
-			<h2 class="flex items-center justify-center gap-2 font-hand text-2xl">
-				{#if i === 0}
-					<span>
-						<img
-							alt="Trophäe"
-							src="https://media.giphy.com/media/PKEH9WF0eq3ja/giphy.gif"
-							width="60px"
-						/>
-					</span>
-				{/if}
-				<span>
-					{i + 1}. {r.name}
-				</span>
-				{#if i === 0}
-					<span>
-						<img
-							alt="Trophäe"
-							src="https://media.giphy.com/media/PKEH9WF0eq3ja/giphy.gif"
-							width="60px"
-						/>
-					</span>
-				{/if}
+		<div
+			class="relative mx-auto w-full max-w-md rounded-lg border border-dashed border-sand-8 py-4 text-center"
+		>
+			{#if i === 0}
+				<img
+					alt="Trophäe"
+					src="https://media.giphy.com/media/PKEH9WF0eq3ja/giphy.gif"
+					class="absolute left-3 top-3 w-12"
+				/>
+				<img
+					alt="Trophäe"
+					src="https://media.giphy.com/media/PKEH9WF0eq3ja/giphy.gif"
+					class="absolute right-3 top-3 w-12"
+				/>
+			{/if}
+			<h2 class="font-hand text-2xl">
+				{i + 1}. {r.name}
 			</h2>
 			<p class="text-sand-12">
 				{r.total_points}
