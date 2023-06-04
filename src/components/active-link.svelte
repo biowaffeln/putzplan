@@ -1,15 +1,16 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { matchesPath } from '$util/matches-path';
 	export const cx = (...classes: unknown[]) => classes.filter(Boolean).join(' ');
 	export let inactiveClass = '';
 	export let activeClass = '';
 	export let href: string;
+	export let exact = false;
 
-	$: isActive = $page.url.pathname === href;
+	const isActive = matchesPath(href, { exact });
 
 	const { class: _class, ...restProps } = $$restProps;
 </script>
 
-<a {href} class={cx(_class, !isActive && inactiveClass, isActive && activeClass)} {...restProps}>
+<a {href} class={cx(_class, !$isActive && inactiveClass, $isActive && activeClass)} {...restProps}>
 	<slot />
 </a>

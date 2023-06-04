@@ -1,8 +1,11 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import ActiveLink from '$components/active-link.svelte';
+	import { matchesPath } from '$util/matches-path';
 	import House from 'phosphor-svelte/lib/House'; // Recommended for faster compiling
 	import ListBullets from 'phosphor-svelte/lib/ListBullets'; // Recommended for faster compiling
+
+	const matchesRoot = matchesPath('/', { exact: true });
+	const matchesPoints = matchesPath('/punkte', { exact: false });
 </script>
 
 <div class="flex h-full flex-col">
@@ -14,8 +17,9 @@
 			href="/"
 			class="flex w-20 flex-col items-center rounded-xl py-1"
 			activeClass="bg-amber-4 text-amber-11"
+			exact
 		>
-			<House size={24} weight={$page.url.pathname === '/' ? 'duotone' : 'regular'} />
+			<House size={24} weight={$matchesRoot ? 'duotone' : 'regular'} />
 			<span class="text-sm">start</span>
 		</ActiveLink>
 		<ActiveLink
@@ -23,7 +27,7 @@
 			class="flex w-20 flex-col items-center rounded-xl py-1"
 			activeClass="bg-amber-4 text-amber-11"
 		>
-			<ListBullets size={24} weight={$page.url.pathname === '/punkte' ? 'duotone' : 'regular'} />
+			<ListBullets size={24} weight={$matchesPoints ? 'duotone' : 'regular'} />
 			<span class="text-sm">punkte</span>
 		</ActiveLink>
 	</nav>

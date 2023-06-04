@@ -9,13 +9,15 @@
 			href="/punkte"
 			class="rounded-full border px-4 py-1.5"
 			inactiveClass="border-sand-8 text-sand-11"
-			activeClass="bg-amber-4 text-amber-11 border-amber-8">diesen Monat</ActiveLink
+			activeClass="bg-amber-4 text-amber-11 border-amber-8"
+			exact>diesen Monat</ActiveLink
 		>
 		<ActiveLink
 			href="/punkte/gesamt"
 			class="rounded-full border px-4 py-1.5"
 			inactiveClass="border-sand-8 text-sand-11"
-			activeClass="bg-amber-4 text-amber-11 border-amber-8">gesamt</ActiveLink
+			activeClass="bg-amber-4 text-amber-11 border-amber-8"
+			exact>gesamt</ActiveLink
 		>
 		<div class="mt-8" />
 	</div>
