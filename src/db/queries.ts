@@ -6,7 +6,7 @@ export function getRoommates() {
 }
 
 export function getChores() {
-	return db.prepare('SELECT * FROM chores').all() as Chore[];
+	return db.prepare('SELECT * FROM chores ORDER BY points ASC').all() as Chore[];
 }
 
 type RecordData = {
