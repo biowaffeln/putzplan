@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
-import { addChoreRecord, getChores } from '$db/queries';
+import { addChoreRecord, getChores } from '$lib/server/db/queries';
 
 export function load({ cookies }) {
 	const roommateId = Number(cookies.get('roommateId'));

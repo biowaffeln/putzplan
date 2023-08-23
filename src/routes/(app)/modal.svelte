@@ -4,7 +4,7 @@
 	import { enhance } from '$app/forms';
 	import confetti from 'canvas-confetti';
 	import { focusTrap } from 'svelte-focus-trap';
-	import type { Chore, Roommate } from '$db/schema';
+	import type { Chore, Roommate } from '$lib/server/db/schema';
 
 	const dispatch = createEventDispatcher();
 
@@ -34,6 +34,7 @@
 	>
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div
+			aria-hidden="true"
 			transition:fade={{ duration: 200 }}
 			class="fixed inset-0 backdrop-blur-sm backdrop-brightness-50"
 			on:click={onClose}

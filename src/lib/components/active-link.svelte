@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { matchesPath } from '$util/matches-path';
+	import { matchesPath } from '$lib/util/matches-path';
 	export const cx = (...classes: unknown[]) => classes.filter(Boolean).join(' ');
 	export let inactiveClass = '';
 	export let activeClass = '';

@@ -1,4 +1,4 @@
-import { getRoommates } from '$db/queries';
+import { getRoommates } from '$lib/server/db/queries';
 
 export function load() {
 	return {

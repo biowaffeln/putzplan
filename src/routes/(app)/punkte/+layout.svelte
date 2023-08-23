@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ActiveLink from '$components/active-link.svelte';
+	import ActiveLink from '$lib/components/active-link.svelte';
 </script>
 
 <h2 class="mt-10 text-center font-hand text-4xl">Punktestand</h2>

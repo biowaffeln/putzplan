@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { getRoommatesRanked } from '$db/queries';
-	import { pluralize } from '$util/pluralize';
+	import type { getRoommatesRanked } from '$lib/server/db/queries';
+	import { pluralize } from '$lib/util/pluralize';
 
 	export let roommatesRanked: ReturnType<typeof getRoommatesRanked>;
 

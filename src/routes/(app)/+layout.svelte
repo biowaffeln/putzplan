@@ -1,8 +1,8 @@
 <script lang="ts">
-	import ActiveLink from '$components/active-link.svelte';
-	import { matchesPath } from '$util/matches-path';
-	import House from 'phosphor-svelte/lib/House'; // Recommended for faster compiling
-	import ListBullets from 'phosphor-svelte/lib/ListBullets'; // Recommended for faster compiling
+	import ActiveLink from '$lib/components/active-link.svelte';
+	import { matchesPath } from '$lib/util/matches-path';
+	import House from 'phosphor-svelte/lib/House';
+	import ListBullets from 'phosphor-svelte/lib/ListBullets';
 
 	const matchesRoot = matchesPath('/', { exact: true });
 	const matchesPoints = matchesPath('/punkte', { exact: false });

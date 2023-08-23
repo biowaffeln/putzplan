@@ -1,4 +1,4 @@
-import { getRoommatesRanked } from '$db/queries';
+import { getRoommatesRanked } from '$lib/server/db/queries';
 
 function startOfMonth(date: Date) {
 	return new Date(date.getFullYear(), date.getMonth(), 1);

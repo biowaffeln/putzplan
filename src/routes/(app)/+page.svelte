@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Chore } from '$db/schema';
-	import { pluralize } from '$util/pluralize';
+	import type { Chore } from '$lib/server/db/schema';
+	import { pluralize } from '$lib/util/pluralize';
 	import Modal from './modal.svelte';
 
 	export let data;
