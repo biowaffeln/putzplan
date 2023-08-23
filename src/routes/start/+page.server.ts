@@ -13,7 +13,9 @@ export const actions = {
 		const roommateId = data.get('roommateId')?.toString();
 		if (!roommateId) return;
 
-		cookies.set('roommateId', roommateId);
+		cookies.set('roommateId', roommateId, {
+			maxAge: 365 * 24 * 60 * 60
+		});
 
 		return { success: true };
 	}
