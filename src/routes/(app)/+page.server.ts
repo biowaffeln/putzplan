@@ -1,5 +1,6 @@
 import { redirect } from '@sveltejs/kit';
-import { addChoreRecord, getChores } from '$lib/server/db/queries';
+import { db } from '$lib/server/db';
+import { choreRecords, chores } from '$lib/server/schema';
 
 export function load({ cookies }) {
 	const roommateId = Number(cookies.get('roommateId'));
@@ -7,9 +8,7 @@ export function load({ cookies }) {
 		throw redirect(307, '/start');
 	}
 
-	const chores = getChores();
-
-	return { roommateId, chores };
+	return { roommateId, chores: db.select().from(chores).orderBy(chores.points).all() };
 }
 
 export const actions = {
@@ -24,6 +23,6 @@ export const actions = {
 			throw new Error('Missing roommateId or choreId');
 		}
 
-		addChoreRecord({ roommateId, choreId, completedAt });
+		db.insert(choreRecords).values({ roommateId, choreId, completedAt }).run();
 	}
 };

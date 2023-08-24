@@ -1,8 +1,9 @@
-import { getRoommates } from '$lib/server/db/queries';
+import { db } from '$lib/server/db';
+import { roommates } from '$lib/server/schema';
 
 export function load() {
 	return {
-		roommates: getRoommates()
+		roommates: db.select().from(roommates).all()
 	};
 }
 

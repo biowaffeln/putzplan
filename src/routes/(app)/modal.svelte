@@ -4,7 +4,7 @@
 	import { enhance } from '$app/forms';
 	import confetti from 'canvas-confetti';
 	import { focusTrap } from 'svelte-focus-trap';
-	import type { Chore, Roommate } from '$lib/server/db/schema';
+	import type { Chore, Roommate } from '$lib/server/schema';
 
 	const dispatch = createEventDispatcher();
 

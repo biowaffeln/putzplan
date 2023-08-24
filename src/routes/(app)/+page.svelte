@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Chore } from '$lib/server/db/schema';
+	import type { Chore } from '$lib/server/schema';
 	import { pluralize } from '$lib/util/pluralize';
 	import Modal from './modal.svelte';
 

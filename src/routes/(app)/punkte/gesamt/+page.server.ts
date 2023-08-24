@@ -1,4 +1,4 @@
-import { getRoommatesRanked } from '$lib/server/db/queries';
+import { getRoommatesRanked } from '$lib/server/ranked-roomates';
 
 export function load() {
 	return {

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { getRoommatesRanked } from '$lib/server/db/queries';
+	import type { RoommateRanked } from '$lib/server/ranked-roomates';
 	import { pluralize } from '$lib/util/pluralize';
 
-	export let roommatesRanked: ReturnType<typeof getRoommatesRanked>;
+	export let roommatesRanked: RoommateRanked[];
 
 	const points = pluralize({ one: 'Punkt', many: 'Punkte' });
 	const chores = pluralize({ one: 'Aufgabe', many: 'Aufgaben' });
@@ -29,12 +29,12 @@
 				{i + 1}. {r.name}
 			</h2>
 			<p class="text-sand-12">
-				{r.total_points}
-				{points(r.total_points)}
+				{r.totalPoints}
+				{points(r.totalPoints)}
 			</p>
 			<p class="text-sand-11">
-				({r.total_chores}
-				{chores(r.total_chores)} erfüllt)
+				({r.totalChores}
+				{chores(r.totalChores)} erfüllt)
 			</p>
 		</div>
 	{/each}
